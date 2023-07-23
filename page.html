@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeForces Problem</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="main_frame">
+    <div class="container">
+		<h1>Welcome to <span style="color: rgb(30, 28, 28)">CODE</span><span style="color: rgb(17, 133, 227)">FORCES</span> Problem Finder</h1>
+                <div class="box">
+                    <label for="username">Codeforces Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="options">Select Problem Rating</label>
+                    <select id="rating" required>
+                    </select>
+                    <button type="submit" onclick="gen()">Submit</button>
+                </div>
+	</div>
+</div>
+	
+</body>
+
+<script>
+    var rat = "";
+    for (let i = 800; i <= 3500; i += 100) {
+        rat += `<option value="${i}" id ="r${i}"> ${i} </option>` + "\n";
+    }
+    document.getElementById("rating").innerHTML = rat;
+</script>
+<script src="fetch.js"> </script>
+</html>
